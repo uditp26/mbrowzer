@@ -10,7 +10,9 @@ class Text: public Node{
     std::string data;
     public:
         Text(std::string data);
-        friend void printNode(std::unique_ptr<Node> root);
+
+        // Friends
+        friend class ParserTests;
 };
 
 #endif

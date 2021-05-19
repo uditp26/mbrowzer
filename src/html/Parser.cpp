@@ -48,9 +48,9 @@ std::unique_ptr<Node> Parser::parseNode() {
 
 std::unique_ptr<Node> Parser::parseText(){
     std::unique_ptr<Node> node {
-        new Text(this->consumeWhile([] (char c) -> bool {
+        new Text{this->consumeWhile([] (char c) -> bool {
         return c != '<';
-     }))};
+     })}};
     return node;
 }
 

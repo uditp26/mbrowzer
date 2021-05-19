@@ -17,8 +17,10 @@ class Node {
         Node();
         Node(NodeType nodeType);
         Node(std::vector<std::unique_ptr<Node>> children, NodeType nodeType);
-        friend void printNode(std::unique_ptr<Node> root);
         virtual ~Node() = default;
+
+        // Friends
+        friend class ParserTests;
  };
 
 #endif
